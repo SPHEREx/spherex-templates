@@ -1,0 +1,27 @@
+{
+  "handle": "SPHEREX-P-001",
+  "module_name": "Perform Forced Photometry",
+  "level": [
+    "L1",
+    "L2",
+    "L3",
+    "Tools"
+  ],
+  "diagram_index": "1",
+  "difficulty": [
+    "Low",
+    "Medium",
+    "High",
+    "Unassigned"
+  ],
+  "status": [
+    "Delivered"
+  ],
+  "ipac_lead_name": "First Last",
+  "ipac_lead_email": "ipac.lead@ipac.caltech.edu",
+  "spherex_lead_name": "First Last",
+  "spherex_lead_email": "spherex.lead@example.edu",
+  "_copy_without_render": [
+    "*.bib"
+  ]
+}
