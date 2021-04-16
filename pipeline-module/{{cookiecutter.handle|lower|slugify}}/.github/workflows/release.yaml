@@ -1,0 +1,48 @@
+name: Release
+
+"on":
+  push:
+    tags:
+      - 'v*.*'
+
+jobs:
+  tex:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # full history for metadata
+          submodules: true
+
+      - name: Get current tag
+        id: get-current-tag
+        uses: zingimmick/github-action-get-current-tag@v1
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{'{{'}} github.repository_owner {{'}}'}}
+          password: ${{'{{'}} secrets.GITHUB_TOKEN {{'}}'}}
+
+      - name: TeX build
+        run: |
+          docker run -v `pwd`:/workspace -w /workspace ghcr.io/SPHEREx/spherex-tex:latest sh -c 'make'
+          mv {{ cookiecutter.handle}}.pdf {{ cookiecutter.handle}}-${{'{{'}} steps.get-current-tag.outputs.tag {{'}}'}}.pdf
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v2
+        with:
+          name: {{ cookiecutter.handle }}-${{'{{'}} steps.get-current-tag.outputs.tag {{'}}'}}.pdf
+          path: {{ cookiecutter.handle }}-${{'{{'}} steps.get-current-tag.outputs.tag {{'}}'}}.pdf
+          retention-days: 14
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{'{{'}} secrets.GITHUB_TOKEN {{'}}'}}
+        with:
+          files: |
+            {{ cookiecutter.handle }}-${{'{{'}} steps.get-current-tag.outputs.tag {{'}}'}}.pdf
