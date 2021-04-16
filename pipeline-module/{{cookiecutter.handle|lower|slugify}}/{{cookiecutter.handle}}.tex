@@ -1,0 +1,48 @@
+\documentclass[MS]{spherex}
+
+\input{meta}
+
+\ssdcHandle{ {{- cookiecutter.handle -}} }
+\modulename{ {{- cookiecutter.module_name -}} }
+\version{0.1}
+% \docDate{YYYY-MM-DD} % uncomment to override the vcs date (see meta.tex)
+\pipelevel{ {{- cookiecutter.level -}} }
+\diagramindex{ {{- cookiecutter.diagram_index -}} }
+
+\spherexlead[email= {{- cookiecutter.spherex_lead_email -}} ]{ {{- cookiecutter.spherex_lead_name -}} }
+\ipaclead[email= {{- cookiecutter.ipac_lead_email -}} ]{ {{- cookiecutter.ipac_lead_name -}} }
+
+% \approved{YYYY-MM-DD}{Name} # uncomment to set approval metadata
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+\section{Data Description}
+
+\subsection{Input format and description}
+
+\subsection{Output file format and description}
+
+\subsection{Simulation Data}
+
+\subsection{Ground Data}
+
+\section{Mathematical Description of Algorithm}
+
+\subsection{Processing Details}
+
+\subsection{Description of Calibration}
+
+\subsection{Description of Trending}
+
+\section{Recommended Algorithm}
+
+\subsection{Validation}
+
+\subsection{Algorithm parameters}
+
+\bibliography{spherex}
+
+\end{document}

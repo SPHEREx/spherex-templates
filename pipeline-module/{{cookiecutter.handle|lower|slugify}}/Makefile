@@ -1,4 +1,4 @@
-DOCNAME = {{ cookiecutter.handle|lower|slugify }}
+DOCNAME = {{ cookiecutter.handle }}
 
 GITVERSION := $(shell git log -1 --date=short --pretty=%h)
 GITDATE := $(shell git log -1 --date=short --pretty=%ad)
