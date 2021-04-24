@@ -4,5 +4,4 @@ parser: spherex-pipeline-module
 theme: spherex
 canonical_url: https://example.com/spherex/{{ cookiecutter.handle|lower|slugify }}/
 metadata:
-    status: {{ cookiecutter.status }}
     difficulty: {{ cookiecutter.difficulty }}
