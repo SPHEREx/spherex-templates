@@ -1,5 +1,6 @@
 {
-  "handle": "SSDC-MS-000",
+  "serial_number": "000",
+  "handle": "SSDC-MS-{{ cookiecutter.serial_number }}",
   "module_name": "Perform Forced Photometry",
   "level": [
     "L1",
