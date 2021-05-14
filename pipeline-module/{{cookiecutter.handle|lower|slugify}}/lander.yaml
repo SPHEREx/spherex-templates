@@ -1,9 +1,5 @@
-source_path: {{ cookiecutter.handle|lower|slugify }}.tex
-pdf: {{cookiecutter.handle|lower|slugify}}.pdf
+source_path: {{ cookiecutter.handle }}.tex
+pdf: {{ cookiecutter.handle }}.pdf
 parser: spherex-pipeline-module
 theme: spherex
 canonical_url: https://example.com/spherex/{{ cookiecutter.handle|lower|slugify }}/
-metadata:
-    status: {{ cookiecutter.status }}
-    difficulty: {{ cookiecutter.difficulty }}
-    diagram_index: {{ cookiecutter.diagram_index }}
