@@ -7,7 +7,7 @@ ifneq "$(GITSTATUS)" ""
 	GITDIRTY = -dirty
 endif
 
-$(DOCNAME).pdf: *.tex meta.tex spherex_pipeline_references.bib
+$(DOCNAME).pdf: *.tex meta.tex
 	latexmk -bibtex -xelatex -f $(DOCNAME)
 
 .PHONY: clean

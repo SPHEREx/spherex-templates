@@ -28,9 +28,12 @@ jobs:
         run: |
           docker run -v `pwd`:/workspace -w /workspace ghcr.io/spherex/spherex-tex:latest sh -c 'make'
 
+      - name: Rename PDF
+        run: mv {{ cookiecutter.handle }}.pdf {{ cookiecutter.handle }}-${{'{{'}} steps.short-sha.outputs.sha {{'}}'}}.pdf
+
       - name: Upload PDF
         uses: actions/upload-artifact@v2
         with:
           name: {{ cookiecutter.handle }}-${{'{{'}} steps.short-sha.outputs.sha {{'}}'}}.pdf
-          path: {{ cookiecutter.handle }}.pdf
+          path: {{ cookiecutter.handle }}-${{'{{'}} steps.short-sha.outputs.sha {{'}}'}}.pdf
           retention-days: 14
