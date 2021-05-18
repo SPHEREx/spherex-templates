@@ -2,7 +2,7 @@
 
 ![Pipeline Level: {{ cookiecutter.level }}](https://img.shields.io/badge/Pipeline-{{ cookiecutter.level }}-blue)
 ![Diagram Index: {{ cookiecutter.diagram_index }}](https://img.shields.io/badge/Diagram__Index-{{ cookiecutter.diagram_index }}-blue)
-![Difficulty: {{ cookiecutter.difficulty }}](https://img.shields.io/badge/Difficulty-{{ cookiecutter.difficulty }}-blue)
+![Difficulty: {{ cookiecutter.difficulty }}](https://img.shields.io/badge/Difficulty-{{ cookiecutter.difficulty }}-{% if cookiecutter.difficulty == "High" %}red{% elif cookiecutter.difficulty == "Medium" %}yellow{% elif cookiecutter.difficulty == "Low" %}green{% else %}blue{% endif %})
 
 ## SPHEREx Science Data Center document
 
