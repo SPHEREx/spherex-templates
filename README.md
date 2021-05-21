@@ -4,4 +4,4 @@
 
 ## Templates
 
-- [pipeline-module](./pipeline-module/)
+- [pipeline-module](./pipeline-module/) — `MS` module specification documents, LaTeX format.
