@@ -44,6 +44,15 @@ git add .
 git commit -m "Initialize repo"
 ```
 
+NB: If your version of `git` is too old to support the `git -b` option, you can do the following instead:
+
+```shell
+git init
+git checkout -b main
+git add .
+git commit -m "Initialize repo"
+```
+
 ### 3. Create the GitHub repository
 
 Now go to GitHub and create a new private repository in the https://github.com/SPHEREx organization:
@@ -90,32 +99,35 @@ Check on the GitHub site for the repository to make sure that the initial “Act
 ### 7. Add the initial content
 
 If all is well, continue working on on your local repository clone to add the actual module text and any figure files that are needed.
-Start by creating a branch for this work:
+
+a. Start by creating a branch for this work:
 
 ```shell
 git checkout -b initial-text
 ```
 
-Then copy over the content from the original document.
+b. Copy over the content from the original document.
 Replace any content **between** `\maketitle` and `\bibliography` with the original document's content.
 **Leave the \bibliography{spherex} from the template rather than using the one from the original document.**
 
 [Learn more about the spherex document class and spherex bibliography file.](https://github.com/SPHEREx/spherex-tex)
 
-Copy any images from the original document on Overleaf into the new repo.
+c. Set the correct current document version number in the `\version{}` macro.  For the initial load into GitHub, *we are keeping the version numbers as they last appeared on Overleaf.*
 
-If the original document used `\modulename` in the body of the document to substitute in the name of the module, you will need to use `\themodulename` for this instead.
-(`\modulename{name}` is now the setter for the name, rather than the getter.)
+d. Copy any images from the original document on Overleaf into the new repo.
+
+e. If the original document used `\modulename` in the body of the document to substitute in the name of the module, you will need to use `\themodulename` for this instead.
+(`\modulename{name}` is now the setter for the name, rather than the getter, which is now `\themodulename`.)
 
 If you'd like, you can compile the document locally.
 See the [spherex-tex](https://github.com/SPHEREx/spherex-tex) repository's [README](https://github.com/SPHEREx/spherex-tex/blob/main/README.md) for instructions.
 
-Once ready, push this content to GitHub:
+f. Once ready, push this content to GitHub:
 
 ```shell
 git add .
 git commit
-git push -u
+git push -u origin initial-text
 ```
 
 The command will include a URL to create a new Pull Request (PR) based on the branch you just pushed. Open that URL in a web browser to start creating the PR.
