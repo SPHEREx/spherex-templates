@@ -6,7 +6,7 @@
 
 ## SPHEREx Science Data Center document
 
-This is the repository for the *{{ cookiecutter.module_name }}* pipeline module description.
+This is the repository for the *{{ cookiecutter.module_name }}* pipeline module specification.
 
 ## Links
 
