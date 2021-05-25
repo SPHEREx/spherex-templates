@@ -10,7 +10,7 @@ This is the repository for the *{{ cookiecutter.module_name }}* pipeline module 
 
 ## Links
 
-- [Releases]({{ cookiecutter.handle|lower|slugify }}/releases)
-- [GitHub Actions CI]({{ cookiecutter.handle|lower|slugify }}/actions/workflows/ci.yaml). *Click on a run to download a PDF preview.*
+- [Releases]({{ cookiecutter.handle|lower|slugify }}/releases) of this document
+- [Continuous Integration on GitHub Actions]({{ cookiecutter.handle|lower|slugify }}/actions/workflows/ci.yaml): *Click on a run to download a PDF preview*
 - [Browse other SSDC documentation repositories](https://github.com/search?q=topic%3Assdc-docs+org%3ASPHEREx&type=repositories)
-- [spherex-tex](https://github.com/SPHEREx/spherex-tex). *Learn how to compile this document and update the `spherex` BibTeX bibliography.*
+- [spherex-tex](https://github.com/SPHEREx/spherex-tex): *Learn how to compile this document and update the `spherex` BibTeX bibliography*
