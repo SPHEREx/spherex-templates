@@ -58,7 +58,7 @@ git commit -m "Initialize repo"
 Now go to GitHub and create a new private repository in the https://github.com/SPHEREx organization:
 
 - The repository name should be the lower-case version of the handle (the same as the name of the directory created by Cookiecutter in Step 1).
-- The repository description should be the document title plus ” - module description”.
+- The repository description should be the document title plus " - module specification".
 - **Do not** add a README, .gitignore, or LICENSE.  The appropriate boilerplate content is all in the template.
 - Please remember to make it private.
 
