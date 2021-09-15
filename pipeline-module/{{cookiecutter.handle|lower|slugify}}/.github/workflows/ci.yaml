@@ -38,4 +38,4 @@ jobs:
         with:
           name: {{ cookiecutter.handle }}-${{'{{'}} steps.short-sha.outputs.sha {{'}}'}}.pdf
           path: {{ cookiecutter.handle }}-${{'{{'}} steps.short-sha.outputs.sha {{'}}'}}.pdf
-          retention-days: 14
+          retention-days: 90
