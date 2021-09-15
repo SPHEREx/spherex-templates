@@ -1,0 +1,47 @@
+name: Comment on artifacts
+on:
+  repository_dispatch:
+
+jobs:
+  comment:
+    name: Add artifact links to pull request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo inputs
+        run: |
+          echo ${{'{{'}} github.event.client_payload.prnumber {{'}}'}}
+          echo ${{'{{'}} github.event.client_payload.checkrunid {{'}}'}}
+
+      - name: Get check_suite_id
+        id: getsuiteid
+        run: |
+          URL="https://api.github.com/repos/${{'{{'}} github.repository {{'}}'}}/actions/runs/${{'{{'}} github.event.client_payload.checkrunid {{'}}'}}"
+          check_suite_id=$(curl -s -u admin:${{'{{'}} secrets.GITHUB_TOKEN {{'}}'}} $URL | jq -r '.check_suite_url' | awk -F "/" '{print $NF}')
+          echo $check_suite_id
+          echo "::set-output name=suiteid::$check_suite_id"
+
+      - name: Get artifacts_id
+        id: getartid
+        run: |
+          URL="https://api.github.com/repos/${{'{{'}} github.repository {{'}}'}}/actions/runs/${{'{{'}} github.event.client_payload.checkrunid {{'}}'}}/artifacts"
+          artifacts_id=$(curl -s -u admin:${{'{{'}} secrets.GITHUB_TOKEN {{'}}'}} $URL | jq '.artifacts[].id')
+          echo $artifacts_id
+          echo "::set-output name=artifactid::$artifacts_id"
+
+      - name: Create comment
+        uses: actions/github-script@v4.1.0
+        env:
+          PRNUMBER: ${{'{{'}} github.event.client_payload.prnumber {{'}}'}}
+          SUITEID: ${{'{{'}} steps.getsuiteid.outputs.suiteid {{'}}'}}
+          ARTIFACTID: ${{'{{'}} steps.getartid.outputs.artifactid {{'}}'}}
+        with:
+          script: |
+            const { PRNUMBER, SUITEID, ARTIFACTID } = process.env
+            const { repo: { owner, repo } } = context;
+            const message = `[Download the latest PDF](https://github.com/${owner}/${repo}/suites/${SUITEID}/artifacts/${ARTIFACTID}) (valid for 90 days)`;
+            github.issues.createComment({
+              issue_number: PRNUMBER,
+              owner: owner,
+              repo: repo,
+              body: message
+            });

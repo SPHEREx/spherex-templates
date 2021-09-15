@@ -39,3 +39,11 @@ jobs:
           name: {{ cookiecutter.handle }}-${{'{{'}} steps.short-sha.outputs.sha {{'}}'}}.pdf
           path: {{ cookiecutter.handle }}-${{'{{'}} steps.short-sha.outputs.sha {{'}}'}}.pdf
           retention-days: 90
+
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
+        if: ${{'{{'}} github.event_name == 'pull_request' {{'}}'}}
+        with:
+          token: ${{'{{'}} secrets.ARTIFACTS_COMMENTING_TOKEN {{'}}'}}
+          event-type: pr-build
+          client-payload: '{"prnumber": "${{'{{'}} github.event.number {{'}}'}}", "checkrunid": "${{'{{'}} github.run_id {{'}}'}}"}'
