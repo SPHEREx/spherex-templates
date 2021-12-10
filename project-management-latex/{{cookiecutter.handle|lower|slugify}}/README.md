@@ -1,9 +1,9 @@
-# {{ cookiecutter.handle }}: {{ cookiecutter.module_name }}
+# {{ cookiecutter.handle }}: {{ cookiecutter.title }}
 
 
 ## SPHEREx Science Data Center document
 
-This is the repository for the *{{ cookiecutter.module_name }}* Project Management document.
+This is the repository for the *{{ cookiecutter.title }}* Project Management document.
 
 ## Links
 
