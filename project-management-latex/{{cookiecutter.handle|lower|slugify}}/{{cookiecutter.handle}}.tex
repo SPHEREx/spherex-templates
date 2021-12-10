@@ -1,0 +1,59 @@
+\documentclass[MS]{spherex}
+% spherex class documentation: https://github.com/SPHEREx/spherex-tex/blob/main/README.md
+
+\input{meta}
+
+\spherexHandle{ {{- cookiecutter.handle -}} }
+\modulename{ {{- cookiecutter.module_name -}} }
+\pipelevel{ {{- cookiecutter.level -}} }
+\diagramindex{ {{- cookiecutter.diagram_index -}} }
+\difficulty{ {{- cookiecutter.difficulty -}} }
+
+\version{0.1}
+% \docDate{YYYY-MM-DD} % uncomment to override the vcs date (see meta.tex)
+% \approved{YYYY-MM-DD}{Approver Name} # uncomment to set approval metadata
+
+\spherexlead[email= {{- cookiecutter.spherex_lead_email -}} ]{ {{- cookiecutter.spherex_lead_name -}} }
+\ipaclead[email= {{- cookiecutter.ipac_lead_email -}} ]{ {{- cookiecutter.ipac_lead_name -}} }
+
+% Additional authors, if any, separated by "\\":
+%% \author{
+%%  \person[email=galileo@example.com]{Galileo~Galilei} \\
+%%  \person{Isaac~Newton}
+%%}
+
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+\section{Data Description}
+
+\subsection{Input format and description}
+
+\subsection{Output file format and description}
+
+\subsection{Simulation Data}
+
+\subsection{Ground Data}
+
+\section{Mathematical Description of Algorithm}
+
+\subsection{Processing Details}
+
+\subsection{Description of Calibration}
+
+\subsection{Description of Trending}
+
+\section{Recommended Algorithm}
+
+\subsection{Validation}
+
+\subsection{Algorithm parameters}
+
+% spherex.bib is distributed with spherex-tex and maintained at
+% https://github.com/SPHEREx/spherex-tex/blob/main/texmf/bibtex/bib/spherex.bib
+\bibliography{spherex}
+
+\end{document}
