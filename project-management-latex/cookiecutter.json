@@ -1,0 +1,10 @@
+{
+  "serial_number": "000",
+  "handle": "SSDC-PM-{{ cookiecutter.serial_number }}",
+  "title": "Document Title",
+  "ipac_lead_name": "First Last",
+  "ipac_lead_email": "ipac.lead@ipac.caltech.edu",
+  "_copy_without_render": [
+    "*.bib"
+  ]
+}
