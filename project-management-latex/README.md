@@ -1,6 +1,6 @@
-# Pipeline module document template
+# Project Management document template
 
-This is the template for SPHEREx pipeline module document repositories (`MS` document category).
+This is the template for SPHEREx project managment document repositories (`PM` document category) written in LaTeX.
 These module descriptions are built around [`spherex-tex` and the `spherex` document class](https://github.com/SPHEREx/spherex-tex).
 
 ## How to create a new document
@@ -20,7 +20,7 @@ You also need a recent version of Git.
 From the directory where you want to create the new document repository, run Cookiecutter:
 
 ```shell
-cookiecutter gh:SPHEREx/spherex-templates --directory pipeline-module
+cookiecutter gh:SPHEREx/spherex-templates --directory project-management-latex
 ```
 
 On the command line, answer each prompt to configure the document.
@@ -33,7 +33,7 @@ Keep in mind that the `serial_number` is zero-padded to a length of three charac
 Move into that directory:
 
 ```shell
-cd ssdc-ms-<...>
+cd ssdc-pm-<...>
 ```
 
 Initialize the Git repository:
@@ -68,7 +68,7 @@ Back in your shell follow the directions GitHub provides to push your existing r
 The instructions look like this:
 
 ```shell
-git remote add origin https://github.com/SPHEREx/ssdc-ms-<...>.git
+git remote add origin https://github.com/SPHEREx/ssdc-pm-<...>.git
 git branch -M main
 git push -u origin main
 ```
@@ -133,11 +133,11 @@ git push -u origin initial-text
 The command will include a URL to create a new Pull Request (PR) based on the branch you just pushed. Open that URL in a web browser to start creating the PR.
 For other ways to create a PR, see the [GitHub documentation](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-Once you have created the Pull Request, or via the **Actions** tab near the top of the GitHub UI (e.g., https://github.com/SPHEREx/ssdc-ms-001/actions), you should see a summary of the execution of the automatic LaTeX workflow that runs when you push or make a pull request — green: success, yellow: still in progress, red: failed.  If it failed, you should be able to click through to see the logs and see any errors, e.g., from LaTeX.
+Once you have created the Pull Request, or via the **Actions** tab near the top of the GitHub UI (e.g., https://github.com/SPHEREx/ssdc-pm-003/actions), you should see a summary of the execution of the automatic LaTeX workflow that runs when you push or make a pull request — green: success, yellow: still in progress, red: failed.  If it failed, you should be able to click through to see the logs and see any errors, e.g., from LaTeX.
 
-If the workflow succeeded, you can click through to it (e.g., https://github.com/SPHEREx/ssdc-ms-001/actions/runs/843518222) and you should see on the lower half of the page that there’s an “artifact” list which includes a PDF for the document.  The PDF name is the document handle plus the 7-digit “SHA” identifier for the commit from which it was generated.
+If the workflow succeeded, you can click through to it (e.g., https://github.com/SPHEREx/ssdc-pm-003/actions/runs/) and you should see on the lower half of the page that there’s an “artifact” list which includes a PDF for the document.  The PDF name is the document handle plus the 7-digit “SHA” identifier for the commit from which it was generated.
 
 This is a temporary artifact just associated with the update.
 The permanent artifact is created with the [GitHub Release](https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository) workflow.
-You can see one here: https://github.com/SPHEREx/ssdc-ms-029/releases.
+You can see one here: https://github.com/SPHEREx/ssdc-pm-003/releases.
 The PDF is under “Assets”.

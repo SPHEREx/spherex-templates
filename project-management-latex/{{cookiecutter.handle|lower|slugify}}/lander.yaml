@@ -1,5 +1,5 @@
 source_path: {{ cookiecutter.handle }}.tex
 pdf: {{ cookiecutter.handle }}.pdf
-parser: spherex-pipeline-module
+parser: spherex-project-management
 theme: spherex
 canonical_url: https://example.com/spherex/{{ cookiecutter.handle|lower|slugify }}/
