@@ -2,4 +2,4 @@ source_path: {{ cookiecutter.handle }}.tex
 pdf: {{ cookiecutter.handle }}.pdf
 parser: spherex-pipeline-module
 theme: spherex
-canonical_url: https://example.com/spherex/{{ cookiecutter.handle|lower|slugify }}/
+canonical_url: https://spherex-docs.ipac.caltech.edu/{{ cookiecutter.handle|lower|slugify }}/
