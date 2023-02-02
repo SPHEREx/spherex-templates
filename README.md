@@ -4,5 +4,6 @@
 
 ## Templates
 
-- [pipeline-module](./pipeline-module/) — `MS` module specification documents, LaTeX format.
-- [project-management-latex](./project-management-latex/) — `PM` Project Management documents, LaTeX format.
+- [pipeline-module](./pipeline-module/) — `MS` module specification documents, LaTeX format
+- [project-management-latex](./project-management-latex/) — `PM` Project Management documents, LaTeX format
+- [dp-latex](./dp-latex/) — `DP` data product specification documents, LaTeX format
