@@ -1,7 +1,7 @@
 # Project Management document template
 
 This is the template for SPHEREx project managment document repositories (`PM` document category) written in LaTeX.
-These module descriptions are built around [`spherex-tex` and the `spherex` document class](https://github.com/SPHEREx/spherex-tex).
+These documents are built around [`spherex-tex` and the `spherex` document class](https://github.com/SPHEREx/spherex-tex).
 
 ## How to create a new document
 
