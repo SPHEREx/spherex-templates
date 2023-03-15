@@ -20,7 +20,7 @@ You also need a recent version of Git.
 From the directory where you want to create the new document repository, run Cookiecutter:
 
 ```shell
-cookiecutter gh:SPHEREx/spherex-templates --directory dp-latex
+cookiecutter gh:SPHEREx/spherex-templates --directory ssdc-dp-latex
 ```
 
 On the command line, answer each prompt to configure the document.
