@@ -5,5 +5,5 @@
 ## Templates
 
 - [pipeline-module](./pipeline-module/) — `MS` module specification documents, LaTeX format
-- [project-management-latex](./project-management-latex/) — `PM` Project Management documents, LaTeX format
-- [dp-latex](./dp-latex/) — `DP` data product specification documents, LaTeX format
+- [project-management-latex](./project-management-latex/) — SSDC `PM` Project Management documents, LaTeX format
+- [ssdc-dp-latex](./ssdc-dp-latex/) — SSDC `DP` data product specification documents, LaTeX format

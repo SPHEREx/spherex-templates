@@ -173,6 +173,9 @@ TSWLatexianTemp*
 *.bak
 *.sav
 
+# Emacs/mg
+*~
+
 # Texpad
 .texpadtmp
 

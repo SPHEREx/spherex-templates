@@ -20,7 +20,7 @@ You also need a recent version of Git.
 From the directory where you want to create the new document repository, run Cookiecutter:
 
 ```shell
-cookiecutter gh:SPHEREx/spherex-templates --directory dp-latex
+cookiecutter gh:SPHEREx/spherex-templates --directory ssdc-dp-latex
 ```
 
 On the command line, answer each prompt to configure the document.
@@ -82,6 +82,7 @@ Once you've pushed the initial content to GitHub you can begin configuring it:
 - From the **About** section on the main page of the repository, click on the :gear: (gear) icon and add the `ssdc-docs` “topic” to the repository.  (This will help us [navigate the many repos](https://github.com/search?q=org%3AIPAC-SW+ssdc-docs&type=repositories) that we’ll have on this organization.)
 
 Let Gregory know at least once a day that you’ve created new repos, and he’ll set the access permissions appropriately to make sure that the whole team has access.
+You can remind Gregory that the new repository also needs to be granted access to the "organization secret" that enables the connection to the document portal.
 
 ### 6. Check the initial build
 

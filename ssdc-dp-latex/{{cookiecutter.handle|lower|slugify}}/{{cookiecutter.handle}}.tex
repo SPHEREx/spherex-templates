@@ -1,0 +1,153 @@
+\documentclass[DP]{spherex}
+% spherex class documentation: https://github.com/SPHEREx/spherex-tex/blob/main/README.md
+
+\input{meta}
+
+\spherexHandle{ {{- cookiecutter.handle -}} }
+\title{ {{- cookiecutter.title -}} }
+
+\version{0.1}
+% \docDate{YYYY-MM-DD} % uncomment to override the vcs date (see meta.tex)
+% \approved{YYYY-MM-DD}{Approver Name} % uncomment to set approval metadata
+
+\ipaclead[email= {{- cookiecutter.ipac_lead_email -}} ]{ {{- cookiecutter.ipac_lead_name -}} }
+
+% Additional authors, if any, separated by "\\":
+%% \author{
+%%  \person[email=galileo@example.com]{Galileo~Galilei} \\
+%%  \person{Isaac~Newton}
+%%}
+
+
+\begin{document}
+\maketitle
+
+\begin{dochistory}
+% Add later versions at the bottom.
+\addtohist{0.1}{2020-01-01}{Initial draft.}{ {{- cookiecutter.ipac_lead_name -}} }
+\end{dochistory}
+
+\section{Overview}
+
+% Briefly describe the nature of the data product.  Edit as needed:
+
+This document defines the {{ cookiecutter.title -}}.
+This data product is produced in the SSDC Pipelines at Level~XXX.
+It ( is / is not ) one of the data products intended for public release.
+
+\subsection{Scope}
+
+% State what this document covers authoritatively and what it does not cover.
+% For example (change if necessary):
+
+This document defines only the data format of individual instances of this
+data product.
+It does not describe details of how they are produced.
+It also does not describe how the full collection of these data products are
+organized in storage, what external metadata tables are associated with them,
+or how they are accessed by users.
+
+This is a document at Level 4 in the SPHEREx systems engineering hierarchy
+and pertains only to the SPHEREx Science Data Center project element.
+
+\subsection{Nomenclature}
+
+The SPHEREx Science Data Center (SSDC) is an organization located at
+the California Institute of Technology / IPAC and is responsible for the
+SPHEREx Level~1--3 science data processing and archiving.
+
+% Add to or edit this list as necessary:
+
+\begin{description}
+  \item[ADCS]  Attitude Determination and Control System: a component of
+    the SPHEREx spacecraft responsible for maintaining the orientation of
+    the spacecraft in orbit and its pointing at designated targets.
+  \item[FITS]  Flexible Image Transport System: an IAU standard for the
+    representation of astronomical images in files.
+  \item[IVOA]  International Virtual Observatory Alliance: an international
+    forum for establishing standards for interoperability of astronomical
+    data products and services.
+  \item[LVF]   Linear Variable Filter: a type of optical filter in which the
+    bandpass varies continuously across the filter.
+  \item[SUR]   Sample-Up-the-Ramp: the readout method used for the SPHEREx
+    detectors, in which the detector is read out at an approximately 1.5s
+    cadence and the resulting pixel values are fitted with a slope
+    representing the uncalibrated flux incident on the pixel.
+\end{description}
+
+\subsection{Change Control}
+
+% Describe how the data product's change control flow works.
+% Who has to approve a change?
+
+This document is under change control at Level 4, within the SSDC.
+Changes require approval by the SSDC task lead or a designee.
+
+As part of the interface with the Science Team
+and end users%%% remove for data products not released externally
+, all substantive changes require a review by a representative of
+the SPHEREx Science Team.
+
+\subsection{Document Release Control}
+
+% Modify as needed:
+
+This document is ultimately intended to be suitable for public release along
+with the SPHEREx data products, and should be edited accordingly.
+
+However, this version of this document has not been formally reviewed from
+export control or other document release perspectives.
+
+\subsection{Applicable Documents}
+
+% Identify key documents related to this data product
+
+\begin{itemize}
+  \item SPHEREx Science Data Center Level 4 Requirements, JPL D-104005
+  \item SPHEREx Data Management Plan, JPL A4333896
+  \item SPHEREx Science Data Center Operations Concept, Caltech/IPAC SSDC-PM-001
+  \item SPHEREx Science Team --- SSDC Operational Interface Agreements, Caltech/IPAC SSDC-IF-002
+ % Delete the next line for data products not released through IRSA:
+  \item NASA IRSA --- SSDC Operational Interface Agreements, Caltech/IPAC SSDC-IF-003
+\end{itemize}
+
+
+\section{Data Product Production}
+
+% Briefly describe where in the system the data product is created, e.g., in
+% which pipeline module, but do not describe _how_ it is produced.
+
+
+\section{Data Product Release}
+
+% Briefly describe whether and how the data product is released outside the SSDC
+% or whatever other entity creates it.
+
+
+\section{Detailed Description}
+
+% NB: This section may be repeated if the document describes multiple data products.
+
+% Provide a full narrative description of the data product itself.
+% Try not to repeat details of _how_ it is produced (e.g., from a pipeline module description).
+% 
+% If it's an image data product, describe the HDUs in the FITS file and the headers that are used.
+% If it's a catalog product, provide a table with column names, data types, units, UCDs, descriptions, etc.
+
+
+\subsection{Data Product Size}
+
+% *Following* the details, we conclude with an estimate of the size of an
+% individual instance of the data product, for images, or an estimate of
+% the size of a catalog per row.
+%
+% Delete for DP documents that are about common internal details or otherwise
+% not about a complete data product.
+
+
+
+% spherex.bib is distributed with spherex-tex and maintained at
+% https://github.com/SPHEREx/spherex-tex/blob/main/texmf/bibtex/bib/spherex.bib
+\bibliography{spherex}
+
+\end{document}
