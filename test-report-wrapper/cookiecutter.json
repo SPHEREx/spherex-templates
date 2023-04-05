@@ -1,0 +1,10 @@
+{
+  "serial_number": "000",
+  "handle": "SSDC-TR-{{ cookiecutter.serial_number }}",
+  "title": "R0 Release Test Report",
+  "ipac_lead_name": "First Last",
+  "ipac_lead_email": "ipac.lead@ipac.caltech.edu",
+  "_copy_without_render": [
+    "*.bib"
+  ]
+}
