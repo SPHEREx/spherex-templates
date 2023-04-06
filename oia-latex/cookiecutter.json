@@ -1,0 +1,11 @@
+{
+  "serial_number": "000",
+  "handle": "SSDC-IF-{{ cookiecutter.serial_number }}",
+  "partner": "Name of partner organization",
+  "title": "SSDC-{{ cookiecutter.partner }} Operational Interface Agreement",
+  "ipac_lead_name": "First Last",
+  "ipac_lead_email": "ipac.lead@ipac.caltech.edu",
+  "_copy_without_render": [
+    "*.bib"
+  ]
+}
