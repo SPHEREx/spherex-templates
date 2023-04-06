@@ -1,4 +1,4 @@
 source_path: {{ cookiecutter.handle }}.tex
-parser: ssdcif
+parser: spherex-ssdc-if
 theme: spherex
 canonical_url: https://spherex-docs.ipac.caltech.edu/{{ cookiecutter.handle|lower|slugify }}/

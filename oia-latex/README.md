@@ -58,7 +58,7 @@ git commit -m "Initialize repo"
 
 ### 3. Create the GitHub repository
 
-Now go to GitHub and create a new private repository in the https://github.com/IPAC-SW organization:
+Now go to GitHub and create a new private repository in the https://github.com/SPHEREx organization:
 
 - The repository name should be the lower-case version of the handle (the same as the name of the directory created by Cookiecutter in Step 1).
 - The repository description should be the document title.
@@ -71,7 +71,7 @@ Back in your shell follow the directions GitHub provides to push your existing r
 The instructions look like this:
 
 ```shell
-git remote add origin https://github.com/IPAC-SW/ssdc-if-<...>.git
+git remote add origin https://github.com/SPHEREx/ssdc-if-<...>.git
 git branch -M main
 git push -u origin main
 ```
@@ -82,7 +82,8 @@ git push -u origin main
 
 Once you've pushed the initial content to GitHub you can begin configuring it:
 
-- From the **About** section on the main page of the repository, click on the :gear: (gear) icon and add the `ssdc-docs` “topic” to the repository.  (This will help us [navigate the many repos](https://github.com/search?q=org%3AIPAC-SW+ssdc-docs&type=repositories) that we’ll have on this organization.)
+- From the **About** section on the main page of the repository, click on the :gear: (gear) icon and add the `ssdc-docs` “topic” to the repository.
+(This will help us [navigate the many repos](https://github.com/search?q=org%3AIPAC-SW+ssdc-docs&type=repositories) that we’ll have on this organization.)
 
 Let Gregory know at least once a day that you’ve created new repos,
 and he’ll set the access permissions appropriately to make sure that the whole team has access.
@@ -136,13 +137,14 @@ git push -u origin tickets/SP-nnn
 The command will include a URL to create a new Pull Request (PR) based on the branch you just pushed. Open that URL in a web browser to start creating the PR.
 For other ways to create a PR, see the [GitHub documentation](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-Once you have created the Pull Request, or via the **Actions** tab near the top of the GitHub UI (e.g., https://github.com/IPAC-SW/ssdc-if-003/actions),
+Once you have created the Pull Request, or via the **Actions** tab near the top of the GitHub UI (e.g., https://github.com/SPHEREx/ssdc-if-003/actions),
 you should see a summary of the execution of the automatic LaTeX workflow that runs when you push or make a pull request — green: success, yellow: still in progress, red: failed.
 If it failed, you should be able to click through to see the logs and see any errors, e.g., from LaTeX.
 
-If the workflow succeeded, you can click through to it (e.g., https://github.com/IPAC-SW/ssdc-if-003/actions/runs/) and you should see on the lower half of the page that there’s an “artifact” list which includes a PDF for the document.  The PDF name is the document handle plus the 7-digit “SHA” identifier for the commit from which it was generated.
+If the workflow succeeded, you can click through to it (e.g., https://github.com/SPHEREx/ssdc-if-003/actions/runs/) and you should see on the lower half of the page that there’s an “artifact” list which includes a PDF for the document.
+The PDF name is the document handle plus the 7-digit “SHA” identifier for the commit from which it was generated.
 
 This is a temporary artifact just associated with the update.
 The permanent artifact is created with the [GitHub Release](https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository) workflow.
-You can see one here: https://github.com/IPAC-SW/ssdc-if-003/releases.
+You can see one here: https://github.com/SPHEREx/ssdc-if-003/releases.
 The PDF is under “Assets”.
