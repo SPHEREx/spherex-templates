@@ -1,0 +1,109 @@
+\documentclass[IF]{spherex}
+% spherex class documentation: https://github.com/SPHEREx/spherex-tex/blob/main/README.md
+
+\input{meta}
+
+\spherexHandle{ {{- cookiecutter.handle -}} }
+\title{SSDC-- {{- cookiecutter.partner }} Operational Interface Agreement}
+\shortTitle{SSDC-- {{- cookiecutter.partner }} OIA}
+
+\interfacepartner{ {{- cookiecutter.partner -}} }
+
+\version{0.1}
+% \docDate{YYYY-MM-DD} % uncomment to override the vcs date (see meta.tex)
+% \approved{YYYY-MM-DD}{Approver Name} % uncomment to set approval metadata
+
+\ipaclead[email= {{- cookiecutter.ipac_lead_email -}} ]{ {{- cookiecutter.ipac_lead_name -}} }
+
+% Additional authors, if any, separated by "\\":
+%% \author{
+%%  \person[email=galileo@example.com]{Galileo~Galilei} \\
+%%  \person{Isaac~Newton}
+%%}
+
+
+\begin{document}
+\maketitle
+
+\begin{dochistory}
+% Add later versions at the bottom.
+\addtohist{0.1}{2020-01-01}{Initial draft.}{ {{- cookiecutter.ipac_lead_name -}} }
+\end{dochistory}
+
+
+\section{Overview}
+
+This is the Operational Interface Agreement between the SPHEREx Science Data Center (SSDC)
+and {{ cookiecutter.partner -}}.
+% Note that due to subtle conventions in English usage you may wish to add
+% "the" before the partner organization's name, or spell it out in full,
+% in the previous sentence, and in the next paragraph, depending on the partner.
+
+\subsection{Scope}
+
+% State what this document covers authoritatively and what it does not cover.
+% For example (change if necessary):
+
+This document covers the type, frequency, and manner of data exchanges between
+the SSDC and {{ cookiecutter.partner -}}, but does not define the details of
+the format of the data exchanged.
+That is deferred to other documents.
+
+% ... which should be referenced below!
+
+\subsection{Nomenclature}
+
+The SPHEREx Science Data Center (SSDC) is an organization located at
+the California Institute of Technology / IPAC and is responsible for the
+SPHEREx Level~1--3 science data processing and archiving.
+
+% Add to or edit this list as necessary:
+
+\begin{description}
+  \item[ADCS]  Attitude Determination and Control System: a component of
+    the SPHEREx spacecraft responsible for maintaining the orientation of
+    the spacecraft in orbit and its pointing at designated targets.
+  \item[FITS]  Flexible Image Transport System: an IAU standard for the
+    representation of astronomical images in files.
+  \item[IVOA]  International Virtual Observatory Alliance: an international
+    forum for establishing standards for interoperability of astronomical
+    data products and services.
+  \item[LVF]   Linear Variable Filter: a type of optical filter in which the
+    bandpass varies continuously across the filter.
+  \item[SUR]   Sample-Up-the-Ramp: the readout method used for the SPHEREx
+    detectors, in which the detector is read out at an approximately 1.5s
+    cadence and the resulting pixel values are fitted with a slope
+    representing the uncalibrated flux incident on the pixel.
+\end{description}
+
+\subsection{Change Control}
+
+% Describe how the data product's change control flow works.
+% Who has to approve a change?
+
+\subsection{Applicable Documents}
+
+% Identify key documents related to this data product
+
+\begin{itemize}
+  \item SPHEREx Science Data Center Level 4 Requirements, JPL D-104005
+  \item SPHEREx Data Management Plan, JPL A4333896
+  \item SPHEREx Science Data Center Operations Concept, Caltech/IPAC SSDC-PM-001
+% Include all applicable Data Product (SSDC-DP-xxx) documents here
+\end{itemize}
+
+
+\section{List of Deliverables}
+
+% Create a \subsection{} for each individual data product.
+
+\section{List of Receivables}
+
+
+
+
+% spherex.bib is distributed with spherex-tex and maintained at
+% https://github.com/SPHEREx/spherex-tex/blob/main/texmf/bibtex/bib/spherex.bib
+% \bibliography{spherex}
+
+\end{document}
