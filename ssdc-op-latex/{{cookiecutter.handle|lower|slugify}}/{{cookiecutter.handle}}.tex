@@ -1,0 +1,43 @@
+\documentclass[OP]{spherex}
+% spherex class documentation: https://github.com/SPHEREx/spherex-tex/blob/main/README.md
+
+\input{meta}
+
+\spherexHandle{ {{- cookiecutter.handle -}} }
+\title{ {{- cookiecutter.title -}} }
+% \shortTitle{Short Title}
+
+\version{0.1}
+% \docDate{YYYY-MM-DD} % uncomment to override the vcs date (see meta.tex)
+
+\ipaclead[email= {{- cookiecutter.ipac_lead_email -}} ]{ {{- cookiecutter.ipac_lead_name -}} }
+
+% Additional authors, if any, separated by "\\":
+%% \author{
+%%  \person[email=galileo@example.com]{Galileo~Galilei} \\
+%%  \person{Isaac~Newton}
+%%}
+
+
+\begin{document}
+\maketitle
+
+\begin{dochistory}
+% Add later versions at the bottom.
+\addtohist{0.1}{2020-01-01}{Initial draft.}{ {{- cookiecutter.ipac_lead_name -}} }
+\end{dochistory}
+
+
+\section{Introduction}
+
+Lorem ipsum.
+
+\section{(principal content)}
+
+Lorem ipsum dolor. \cite{SPHEREx_SPIE}
+
+% spherex.bib is distributed with spherex-tex and maintained at
+% https://github.com/SPHEREx/spherex-tex/blob/main/texmf/bibtex/bib/spherex.bib
+\bibliography{spherex}
+
+\end{document}
