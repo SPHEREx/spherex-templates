@@ -4,7 +4,8 @@
 \input{meta}
 
 \spherexHandle{ {{- cookiecutter.handle -}} }
-\title{ {{- cookiecutter.va_name -}}: Objective Evidence Report}
+\title{ {{- cookiecutter.va_name }} (VA {{ cookiecutter.va_doors_id -}} ): Objective Evidence Report}
+\shortTitle{ {{- cookiecutter.va_name -}} : VA OER}
 
 \version{0.1}
 % \docDate{YYYY-MM-DD} % uncomment to override the vcs date (see meta.tex)
@@ -24,22 +25,28 @@
 
 \begin{longtable}{|l|p{0.5\textwidth}|}
 \hline
-\textbf{DNG ID} & {{- cookiecutter.va_doors_id -}} (IPAC JIRA: {{- cookiecutter.va_jira_id -}}) \\
-\textbf{VA Name} & {{- cookiecutter.va_name -}} \\
-\textbf{VA Owner} & First Last \\
+\textbf{DNG ID} & {{ cookiecutter.va_doors_id }} (IPAC JIRA: {{ cookiecutter.va_jira_id -}}) \\
+\textbf{VA Name} & {{ cookiecutter.va_name }} \\
+\textbf{VA Owner} & \person[email=galileo@ipac.caltech.edu]{Galileo~Galilei} \\
 \textbf{Dates of Execution} & yyyy-mm-dd \\
-\textbf{Venue} & {{- cookiecutter.va_venue -}} \\
-\textbf{IPAC Lead for Execution} & \person[email= {{- cookiecutter.ipac_lead_email -}} ]{ {{- cookiecutter.ipac_lead_name -}} } \\
+\textbf{Venue} & {{ cookiecutter.va_venue }} \\
+\textbf{IPAC Lead} & \person[email= {{- cookiecutter.ipac_lead_email -}} ]{ {{- cookiecutter.ipac_lead_name -}} } \\
+\textbf{Execution Lead} & \person[email=galileo@ipac.caltech.edu]{Galileo~Galilei} \\
 \hline
 \end{longtable}
 
 \section{Requirements}
 
-\begin{longtable}{|l|p{0.5\textwidth}|l|l|}
+\begin{longtable}{|l|p{0.4\textwidth}|l|l|}
 \hline
-\textbf{DNG ID} & \textbf{Requirement Text} & \textbf{Verification Status\\(Pass/Partial/Fail)} & \textbf{Justification} \\ \hline\hline
+\textbf{DNG ID} & \textbf{Requirement Text} & \textbf{Status} & \textbf{Justification} \\
+ &  & \textbf{(Pass/} & \\
+ &  & \textbf{Partial/} & \\
+ &  & \textbf{Fail)} & \\ \hline\hline
 \endhead
-000000 & text of requirement & Pass & If Partial or Fail, when/where will it be complete? If Pass, why? \\
+000000 & text of & Pass? & If Partial or Fail, when/where? \\
+ & requirement &  & will it be complete? If Pass, why? \\
+\hline
 \end{longtable}
 
 \section{VA Closure Summary}
@@ -79,10 +86,11 @@
 % Delete inapplicable elements as appropriate
 
 \begin{description}
-  \item[Memo Location:] % links to where this memo is located
+  \item[Memo Location:] This document can be found at the following locations:
     \begin{description}
-      \item[IPAC Document Archive] \href{https://spherex-docs.ipac.caltech.edu/ {{- cookiecutter.handle -}} }
-      \item[Alfresco] \href{https://alfresco.jpl.nasa.gov/share/page/site/spherex/... }
+      \item[IPAC Document Archive] \url{https://spherex-docs.ipac.caltech.edu/ {{- cookiecutter.handle|lower -}} }
+      \item[SPHEREx Alfresco] \url{https://alfresco.jpl.nasa.gov/share/page/site/spherex/...}
+    \end{description}
   \item[Data Review Location:] \textit{(tests/demonstration only)} link to where the data review package is located; if not already included in the data review package, also include:
     \begin{description}
       \item[Procedure As-run Location:] red-lined as-run procedure
@@ -97,12 +105,18 @@
 \section{Summary of Open Items}
 
 \begin{longtable}{|l|l|l|}
-\textbf{Category} & \textbf{Item ID and/or title} & \textbf{Rationale} \\
+\hline
+\textbf{Category} & \textbf{Item ID and/or title} & \textbf{Rationale} \\ \hline\hline
 \endhead
 % Delete categories that do not apply
-\textbf{JIRA items} & \textit{(list ID (as href) and title of IPAC JIRA items arising from the test)} & \textit{(why is it OK to close the VA given the item - e.g., will be covered in a subsequent planned VA)} \\
+\textbf{JIRA items} & \textit{(list ID (as href), title} & \textit{(why OK to close the VA given the item -} \\
+ & \textit{of items arising from the test)} & \textit{e.g., will be covered in a subsequent planned VA)} \\
+\hline
 \textbf{TAYFEs} & \textit{(list ID and title of each relevant TAYFE)} & \textit{(rationale for exception)} \\
-\textbf{Open Items} & \textit{(list other open items, with links if available)} & \textit{(rationale for VA closure given the item)} \\
+\hline
+\textbf{Open Items} & \textit{(list other open items,} & \textit{(rationale for VA closure} \\
+ & \textit{with links if available)} & \textit{given the item)} \\
+\hline
 \end{longtable}
 
 \section{Closure Statement}
