@@ -1,0 +1,101 @@
+\documentclass[TR]{spherex}
+% spherex class documentation: https://github.com/SPHEREx/spherex-tex/blob/main/README.md
+
+\input{meta}
+
+\spherexHandle{ {{- cookiecutter.handle -}} }
+\title{ {{- cookiecutter.va_name -}}: Objective Evidence Report}
+
+\version{0.1}
+% \docDate{YYYY-MM-DD} % uncomment to override the vcs date (see meta.tex)
+% \approved{YYYY-MM-DD}{Approver Name} % uncomment to set approval metadata
+
+\ipaclead[email= {{- cookiecutter.ipac_lead_email -}} ]{ {{- cookiecutter.ipac_lead_name -}} }
+
+% Additional authors, if any, separated by "\\":
+%% \author{
+%%  \person[email=galileo@example.com]{Galileo~Galilei} \\
+%%  \person{Isaac~Newton}
+%%}
+
+
+\begin{document}
+\maketitle
+
+\begin{longtable}{|l|p{0.5\textwidth}|}
+\hline
+\textbf{DNG ID} & {{- cookiecutter.va_doors_id -}} (IPAC JIRA: {{- cookiecutter.va_jira_id -}}) \\
+\textbf{VA Name} & {{- cookiecutter.va_name -}} \\
+\textbf{Dates of Execution} & yyyy-mm-dd \\
+\textbf{Venue} & {{- cookiecutter.va_venue -}} \\
+\textbf{IPAC Lead for Execution} & \person[email= {{- cookiecutter.ipac_lead_email -}} ]{ {{- cookiecutter.ipac_lead_name -}} } \\
+\hline
+\end{longtable}
+
+\section{Requirements}
+
+\begin{longtable}{|l|p{0.5\textwidth}|l|l|}
+\hline
+\textbf{DNG ID} & \textbf{Requirement Text} & \textbf{Verification Status\\(Pass/Partial/Fail)} & \textbf{Justification} \\ \hline\hline
+\endhead
+000000 & text of requirement & Pass & If Partial or Fail, when/where will it be complete? If Pass, why? \\
+\end{longtable}
+
+\section{VA Closure Summary}
+
+% Summary of activity, including a list of objectives/success criteria and
+% whether each was met (or justification for failure). Discuss any deviations
+% from original verification approach (including hardware config deviations,
+% venue changes, etc.) and why those are ok. If relevant, discuss process
+% details and who was involved in the process and closure approval.
+% See examples in Alfresco folder.
+
+\section{Summary of Configuration} % (tests/demonstrations only; delete section if N/A)
+
+\subsection{Hardware Configuration}
+
+\subsection{SSDC Software Version}
+
+\subsection{Additional Software Versions} % (if applicable)
+
+\section{Key Inputs and Assumptions} % (analyses and/or inspections only; delete section if N/A)
+
+% Inputs obtained from supporting and configuration-controlled documents such as
+% spacecraft activity flows. Any applicable assumptions made in performing the analysis.
+% Questions to consider:
+%   * Does this analysis link to any higher or lower-level analyses or tests?
+%     What are those inputs?  Are there any relevant or critical outputs?
+%   * What assumptions are made in the analysis?
+%   * How are test, analysis and model uncertainties handled? (There could
+%     be general uncertainties on the inputs and/or uncertainties or
+%     simplifications on the models themselves, which could result in
+%     uncertainties in the outputs.)
+%   * What is configuration controlled and how?
+%   * For models used in the analysis, has that model been validated and how?
+
+\section{Objective Evidence of VA Closure}
+
+\section{Summary of Open Items}
+
+\begin{longtable}{|l|l|l|}
+\textbf{Open Items} & \textbf{Rationale for VA closure} & \textbf{When to be closed} \\
+(List of other open items, with links) & (given the open item) & \\
+\endhead
+item name (link) & rationale & when-to-close \\
+\end{longtable}
+
+\section{Closure Statement}
+
+% Why is it acceptable to close this VA based on the test execution?
+%
+% Notes:
+%   * Closure approvals are captured outside of this memo in DNG attribute space.
+%   * When finished with the memo, link to the VA in DNG under ``Objective Evidence''.
+%   * For any questions/clarifications/concerns, contact Heather Bottom: heather.a.bottom@jpl.nasa.gov.
+
+
+% spherex.bib is distributed with spherex-tex and maintained at
+% https://github.com/SPHEREx/spherex-tex/blob/main/texmf/bibtex/bib/spherex.bib
+\bibliography{spherex}
+
+\end{document}

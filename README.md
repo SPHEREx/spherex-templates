@@ -8,3 +8,4 @@
 - [project-management-latex](./project-management-latex/) — SSDC `PM` Project Management documents, LaTeX format
 - [ssdc-dp-latex](./ssdc-dp-latex/) — SSDC `DP` data product specification documents, LaTeX format
 - [ssdc-tn-latex](./ssdc-tn-latex/) — SSDC `TN` technical note documents, LaTeX format
+- [va-objective-evidence](./va-objective-evidence/) — SSDC `TR` Objective Evidence documents, LaTeX format
