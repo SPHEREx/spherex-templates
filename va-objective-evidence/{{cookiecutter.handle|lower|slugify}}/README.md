@@ -3,7 +3,7 @@
 
 ## SPHEREx Science Data Center Test Report document
 
-This is the repository for the *{{ cookiecutter.va_name }}* Verification Activity Objective Evidence memo.
+This is the repository for the *{{ cookiecutter.va_name }}* Verification Activity Objective Evidence report.
 
 - JPL DOORS ID for this VA: {{ cookiecutter.va_doors_id }}
 {% if cookiecutter.va_jira_id != 'SVV-999' -%}

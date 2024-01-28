@@ -26,6 +26,7 @@
 \hline
 \textbf{DNG ID} & {{- cookiecutter.va_doors_id -}} (IPAC JIRA: {{- cookiecutter.va_jira_id -}}) \\
 \textbf{VA Name} & {{- cookiecutter.va_name -}} \\
+\textbf{VA Owner} & First Last \\
 \textbf{Dates of Execution} & yyyy-mm-dd \\
 \textbf{Venue} & {{- cookiecutter.va_venue -}} \\
 \textbf{IPAC Lead for Execution} & \person[email= {{- cookiecutter.ipac_lead_email -}} ]{ {{- cookiecutter.ipac_lead_name -}} } \\
@@ -75,13 +76,33 @@
 
 \section{Objective Evidence of VA Closure}
 
+% Delete inapplicable elements as appropriate
+
+\begin{description}
+  \item[Memo Location:] % links to where this memo is located
+    \begin{description}
+      \item[IPAC Document Archive] \href{https://spherex-docs.ipac.caltech.edu/ {{- cookiecutter.handle -}} }
+      \item[Alfresco] \href{https://alfresco.jpl.nasa.gov/share/page/site/spherex/... }
+  \item[Data Review Location:] \textit{(tests/demonstration only)} link to where the data review package is located; if not already included in the data review package, also include:
+    \begin{description}
+      \item[Procedure As-run Location:] red-lined as-run procedure
+      \item[Activity Report Location:] report of activity execution and any problems encountered during the test
+      \item[Data Archive Location:] command logs, on-board event logs, telemetry
+    \end{description}
+  \item[Analysis/Inspection Details:] \textit{(analysis/inspection only)} link to where the analysis or inspection is located
+  \item[Notes:] \textit{optional}
+\end{description}
+
+
 \section{Summary of Open Items}
 
 \begin{longtable}{|l|l|l|}
-\textbf{Open Items} & \textbf{Rationale for VA closure} & \textbf{When to be closed} \\
-(List of other open items, with links) & (given the open item) & \\
+\textbf{Category} & \textbf{Item ID and/or title} & \textbf{Rationale} \\
 \endhead
-item name (link) & rationale & when-to-close \\
+% Delete categories that do not apply
+\textbf{JIRA items} & \textit{(list ID (as href) and title of IPAC JIRA items arising from the test)} & \textit{(why is it OK to close the VA given the item - e.g., will be covered in a subsequent planned VA)} \\
+\textbf{TAYFEs} & \textit{(list ID and title of each relevant TAYFE)} & \textit{(rationale for exception)} \\
+\textbf{Open Items} & \textit{(list other open items, with links if available)} & \textit{(rationale for VA closure given the item)} \\
 \end{longtable}
 
 \section{Closure Statement}

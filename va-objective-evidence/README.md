@@ -100,39 +100,44 @@ Check on the GitHub site for the repository to make sure that the initial “Act
 
 ### 7. Add the initial content
 
-If all is well, continue working on on your local repository clone to add the actual module text and any figure files that are needed.
+If all is well, continue working on on your local repository clone to add the actual document text and any figure files that are needed.
 
-a. Start by creating a branch for this work:
+a. Start by creating a branch for this work, e.g. (based on a work ticket),
 
 ```shell
-git checkout -b initial-text
+git checkout -b SP-nnn
 ```
 
-b. Copy over the content from the original document.
+b. If you're starting with an existing draft, e.g., from Overleaf, copy over the content from the original document.
 Replace any content **between** `\maketitle` and `\bibliography` with the original document's content.
-**Leave the \bibliography{spherex} from the template rather than using the one from the original document.**
+**Do not change the document class and do not remove/replace any of the header material from the template.
+Leave the \bibliography{spherex} from the template rather than using the one from the original document.**
 
 [Learn more about the spherex document class and spherex bibliography file.](https://github.com/SPHEREx/spherex-tex)
 
-c. Set the correct current document version number in the `\version{}` macro.  For the initial load into GitHub, *we are keeping the version numbers as they last appeared on Overleaf.*
+c. Set the correct current document version number in the `\version{}` macro.
+For an existing document, for the initial load into GitHub, *keep the version number as it last appeared on Overleaf
+(or elsewhere).*
 
 d. Copy any images from the original document on Overleaf into the new repo.
 
-If you'd like, you can compile the document locally.
+e. If you'd like, you can compile the document locally.
 See the [spherex-tex](https://github.com/SPHEREx/spherex-tex) repository's [README](https://github.com/SPHEREx/spherex-tex/blob/main/README.md) for instructions.
 
-e. Once ready, push this content to GitHub:
+f. Once ready, push this content to GitHub:
 
 ```shell
 git add .
 git commit
-git push -u origin initial-text
+git push -u origin SP-nnn
 ```
 
-The command will include a URL to create a new Pull Request (PR) based on the branch you just pushed. Open that URL in a web browser to start creating the PR.
+The command will provide a URL to create a new Pull Request (PR) based on the branch you just pushed.
+Open that URL in a web browser to start creating the PR.
 For other ways to create a PR, see the [GitHub documentation](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-Once you have created the Pull Request, or via the **Actions** tab near the top of the GitHub UI (e.g., https://github.com/IPAC-SW/ssdc-tr-001/actions), you should see a summary of the execution of the automatic LaTeX workflow that runs when you push or make a pull request — green: success, yellow: still in progress, red: failed.  If it failed, you should be able to click through to see the logs and see any errors, e.g., from LaTeX.
+Once you have created the Pull Request, or via the **Actions** tab near the top of the GitHub UI (e.g., https://github.com/IPAC-SW/ssdc-tr-001/actions), you should see a summary of the execution of the automatic LaTeX workflow that runs when you push or make a pull request — green: success, yellow: still in progress, red: failed.
+If it failed, you should be able to click through to see the logs and see any errors, e.g., from LaTeX.
 
 If the workflow succeeded, you can click through to it (e.g., https://github.com/IPAC-SW/ssdc-tr-001/actions/runs/) and you should see on the lower half of the page that there’s an “artifact” list which includes a PDF for the document.  The PDF name is the document handle plus the 7-digit “SHA” identifier for the commit from which it was generated.
 
