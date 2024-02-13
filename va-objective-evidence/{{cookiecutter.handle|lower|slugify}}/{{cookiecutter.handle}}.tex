@@ -23,6 +23,12 @@
 \begin{document}
 \maketitle
 
+\begin{dochistory}
+% Add later versions at the bottom.
+\addtohist{0.1}{2024-01-01}{Initial draft.}{ {{- cookiecutter.ipac_lead_name -}} }
+\end{dochistory}
+
+
 \begin{longtable}{|l|p{0.5\textwidth}|}
 \hline
 \textbf{DNG ID} & {{ cookiecutter.va_doors_id }} (IPAC JIRA: {{ cookiecutter.va_jira_id -}}) \\
@@ -37,9 +43,9 @@
 
 \section{Requirements}
 
-\begin{longtable}{|l|p{0.4\textwidth}|l|l|}
+\begin{longtable}{|l|p{0.4\textwidth}|l|p{0.3\textwidth}|}
 \hline
-\textbf{DNG ID} & \textbf{Requirement Text} & \textbf{Status} & \textbf{Justification} \\
+\textbf{DNG ID} & \textbf{Requirement text} & \textbf{Status} & \textbf{Work remaining to verify} \\
  &  & \textbf{(Pass/} & \\
  &  & \textbf{Partial/} & \\
  &  & \textbf{Fail)} & \\ \hline\hline
@@ -49,6 +55,7 @@
 \hline
 \end{longtable}
 
+
 \section{VA Closure Summary}
 
 % Summary of activity, including a list of objectives/success criteria and
@@ -57,6 +64,26 @@
 % venue changes, etc.) and why those are ok. If relevant, discuss process
 % details and who was involved in the process and closure approval.
 % See examples in Alfresco folder.
+
+\subsection{Objectives}
+
+The objectives of this test were to:
+
+\begin{enumerate}
+  \item Verify that ...
+\end{enumerate}
+
+% Summarize, if appropriate, the connection of the objectives to the various requirements covered.
+
+\subsection{Results}
+
+% Summarize the results as they connect to the objectives of the test.
+
+% \subsection{Creation of test-case data}
+
+% \subsection{Limitations in the test coverage}
+
+% \subsection{Deviations from flight-like conditions}
 
 \section{Summary of Configuration} % (tests/demonstrations only; delete section if N/A)
 
@@ -91,11 +118,16 @@
       \item[IPAC Document Archive] \url{https://spherex-docs.ipac.caltech.edu/ {{- cookiecutter.handle|lower -}} }
       \item[SPHEREx Alfresco] \url{https://alfresco.jpl.nasa.gov/share/page/site/spherex/...}
     \end{description}
-  \item[Data Review Location:] \textit{(tests/demonstration only)} link to where the data review package is located; if not already included in the data review package, also include:
+  \item[Data Review Location:] \textit{(tests/demonstration only)} The report, as well as other information supporting the closure of this VA, are kept in the folder
+    `` {{- cookiecutter.va_name }} (VA {{ cookiecutter.va_doors_id -}} )`` \\
+    (URL \href{https://alfresco.jpl.nasa.gov/share/page/site/spherex/folder-details?nodeRef=workspace://SpacesStore/...}{\texttt{https://alfresco.jpl.nasa.gov/share/page/site/spherex/folder-details?} \\
+    \texttt{nodeRef=workspace://SpacesStore/...}}), \\
+    located in the document tree at
+    ``Work Area / Science / Data Pipeline / SPHEREx Science Data Center (SSDC) / Verification Reports''.
     \begin{description}
-      \item[Procedure As-run Location:] red-lined as-run procedure
-      \item[Activity Report Location:] report of activity execution and any problems encountered during the test
-      \item[Data Archive Location:] command logs, on-board event logs, telemetry
+      \item[Procedure As-run Location:] \textit{(specify a section of this report, or an external document)}
+      \item[Activity Report Location:] \textit{(specify a section of this report, or an external document)}
+      \item[Data Archive Location:] \textit{(specify an SSDC location where the raw data are located, e.g., command logs, on-board event logs, telemetry )} \\
     \end{description}
   \item[Analysis/Inspection Details:] \textit{(analysis/inspection only)} link to where the analysis or inspection is located
   \item[Notes:] \textit{optional}
@@ -104,13 +136,15 @@
 
 \section{Summary of Open Items}
 
-\begin{longtable}{|l|l|l|}
+\begin{longtable}{|l|p{0.4\textwidth}|p{0.4\textwidth}|}
 \hline
-\textbf{Category} & \textbf{Item ID and/or title} & \textbf{Rationale} \\ \hline\hline
+\textbf{Category} & \textbf{Item ID and/or title} & \textbf{Rationale for closure} \\
+ & & \textbf{notwithstanding the item} \\ \hline\hline
 \endhead
 % Delete categories that do not apply
 \textbf{JIRA items} & \textit{(list ID (as href), title} & \textit{(why OK to close the VA given the item -} \\
  & \textit{of items arising from the test)} & \textit{e.g., will be covered in a subsequent planned VA)} \\
+% \href{https://jira.ipac.caltech.edu/browse/SP-xxx}{SP-xxx}:
 \hline
 \textbf{TAYFEs} & \textit{(list ID and title of each relevant TAYFE)} & \textit{(rationale for exception)} \\
 \hline
