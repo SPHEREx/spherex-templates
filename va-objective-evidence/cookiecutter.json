@@ -1,0 +1,13 @@
+{
+  "serial_number": "000",
+  "handle": "SSDC-TR-{{ cookiecutter.serial_number }}",
+  "va_name": "Verification Activity name",
+  "va_doors_id": "145876",
+  "va_jira_id": "SVV-999 (optional)",
+  "va_venue": "N/A",
+  "ipac_lead_name": "First Last",
+  "ipac_lead_email": "ipac.lead@ipac.caltech.edu",
+  "_copy_without_render": [
+    "*.bib"
+  ]
+}

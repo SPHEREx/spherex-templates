@@ -1,0 +1,170 @@
+\documentclass[TR]{spherex}
+% spherex class documentation: https://github.com/SPHEREx/spherex-tex/blob/main/README.md
+
+\input{meta}
+
+\spherexHandle{ {{- cookiecutter.handle -}} }
+\title{ {{- cookiecutter.va_name }} (VA {{ cookiecutter.va_doors_id -}} ): Objective Evidence Report}
+\shortTitle{ {{- cookiecutter.va_name -}} : VA OER}
+
+\version{0.1}
+% \docDate{YYYY-MM-DD} % uncomment to override the vcs date (see meta.tex)
+% \approved{YYYY-MM-DD}{Approver Name} % uncomment to set approval metadata
+
+\ipaclead[email= {{- cookiecutter.ipac_lead_email -}} ]{ {{- cookiecutter.ipac_lead_name -}} }
+
+% Additional authors, if any, separated by "\\":
+%% \author{
+%%  \person[email=galileo@example.com]{Galileo~Galilei} \\
+%%  \person{Isaac~Newton}
+%%}
+
+
+\begin{document}
+\maketitle
+
+\begin{dochistory}
+% Add later versions at the bottom.
+\addtohist{0.1}{2024-01-01}{Initial draft.}{ {{- cookiecutter.ipac_lead_name -}} }
+\end{dochistory}
+
+
+\begin{longtable}{|l|p{0.5\textwidth}|}
+\hline
+\textbf{DNG ID} & {{ cookiecutter.va_doors_id }} (IPAC JIRA: {{ cookiecutter.va_jira_id -}}) \\
+\textbf{VA Name} & {{ cookiecutter.va_name }} \\
+\textbf{VA Owner} & \person[email=galileo@ipac.caltech.edu]{Galileo~Galilei} \\
+\textbf{Dates of Execution} & yyyy-mm-dd \\
+\textbf{Venue} & {{ cookiecutter.va_venue }} \\
+\textbf{IPAC Lead} & \person[email= {{- cookiecutter.ipac_lead_email -}} ]{ {{- cookiecutter.ipac_lead_name -}} } \\
+\textbf{Execution Lead} & \person[email=galileo@ipac.caltech.edu]{Galileo~Galilei} \\
+\hline
+\end{longtable}
+
+\section{Requirements}
+
+\begin{longtable}{|l|p{0.4\textwidth}|l|p{0.3\textwidth}|}
+\hline
+\textbf{DNG ID} & \textbf{Requirement text} & \textbf{Status} & \textbf{Work remaining to verify} \\
+ &  & \textbf{(Pass/} & \\
+ &  & \textbf{Partial/} & \\
+ &  & \textbf{Fail)} & \\ \hline\hline
+\endhead
+000000 & text of & Pass? & If Partial or Fail, when/where? \\
+ & requirement &  & will it be complete? If Pass, why? \\
+\hline
+\end{longtable}
+
+
+\section{VA Closure Summary}
+
+% Summary of activity, including a list of objectives/success criteria and
+% whether each was met (or justification for failure). Discuss any deviations
+% from original verification approach (including hardware config deviations,
+% venue changes, etc.) and why those are ok. If relevant, discuss process
+% details and who was involved in the process and closure approval.
+% See examples in Alfresco folder.
+
+\subsection{Objectives}
+
+The objectives of this test were to:
+
+\begin{enumerate}
+  \item Verify that ...
+\end{enumerate}
+
+% Summarize, if appropriate, the connection of the objectives to the various requirements covered.
+
+\subsection{Results}
+
+% Summarize the results as they connect to the objectives of the test.
+
+% \subsection{Creation of test-case data}
+
+% \subsection{Limitations in the test coverage}
+
+% \subsection{Deviations from flight-like conditions}
+
+\section{Summary of Configuration} % (tests/demonstrations only; delete section if N/A)
+
+\subsection{Hardware Configuration}
+
+\subsection{SSDC Software Version}
+
+\subsection{Additional Software Versions} % (if applicable)
+
+\section{Key Inputs and Assumptions} % (analyses and/or inspections only; delete section if N/A)
+
+% Inputs obtained from supporting and configuration-controlled documents such as
+% spacecraft activity flows. Any applicable assumptions made in performing the analysis.
+% Questions to consider:
+%   * Does this analysis link to any higher or lower-level analyses or tests?
+%     What are those inputs?  Are there any relevant or critical outputs?
+%   * What assumptions are made in the analysis?
+%   * How are test, analysis and model uncertainties handled? (There could
+%     be general uncertainties on the inputs and/or uncertainties or
+%     simplifications on the models themselves, which could result in
+%     uncertainties in the outputs.)
+%   * What is configuration controlled and how?
+%   * For models used in the analysis, has that model been validated and how?
+
+\section{Objective Evidence of VA Closure}
+
+% Delete inapplicable elements as appropriate
+
+\begin{description}
+  \item[Memo Location:] This document can be found at the following locations:
+    \begin{description}
+      \item[IPAC Document Archive] \url{https://spherex-docs.ipac.caltech.edu/ {{- cookiecutter.handle|lower -}} }
+      \item[SPHEREx Alfresco] \url{https://alfresco.jpl.nasa.gov/share/page/site/spherex/...}
+    \end{description}
+  \item[Data Review Location:] \textit{(tests/demonstration only)} The report, as well as other information supporting the closure of this VA, are kept in the folder
+    `` {{- cookiecutter.va_name }} (VA {{ cookiecutter.va_doors_id -}} )`` \\
+    (URL \href{https://alfresco.jpl.nasa.gov/share/page/site/spherex/folder-details?nodeRef=workspace://SpacesStore/...}{\texttt{https://alfresco.jpl.nasa.gov/share/page/site/spherex/folder-details?} \\
+    \texttt{nodeRef=workspace://SpacesStore/...}}), \\
+    located in the document tree at
+    ``Work Area / Science / Data Pipeline / SPHEREx Science Data Center (SSDC) / Verification Reports''.
+    \begin{description}
+      \item[Procedure As-run Location:] \textit{(specify a section of this report, or an external document)}
+      \item[Activity Report Location:] \textit{(specify a section of this report, or an external document)}
+      \item[Data Archive Location:] \textit{(specify an SSDC location where the raw data are located, e.g., command logs, on-board event logs, telemetry )} \\
+    \end{description}
+  \item[Analysis/Inspection Details:] \textit{(analysis/inspection only)} link to where the analysis or inspection is located
+  \item[Notes:] \textit{optional}
+\end{description}
+
+
+\section{Summary of Open Items}
+
+\begin{longtable}{|l|p{0.4\textwidth}|p{0.4\textwidth}|}
+\hline
+\textbf{Category} & \textbf{Item ID and/or title} & \textbf{Rationale for closure} \\
+ & & \textbf{notwithstanding the item} \\ \hline\hline
+\endhead
+% Delete categories that do not apply
+\textbf{JIRA items} & \textit{(list ID (as href), title} & \textit{(why OK to close the VA given the item -} \\
+ & \textit{of items arising from the test)} & \textit{e.g., will be covered in a subsequent planned VA)} \\
+% \href{https://jira.ipac.caltech.edu/browse/SP-xxx}{SP-xxx}:
+\hline
+\textbf{TAYFEs} & \textit{(list ID and title of each relevant TAYFE)} & \textit{(rationale for exception)} \\
+\hline
+\textbf{Open Items} & \textit{(list other open items,} & \textit{(rationale for VA closure} \\
+ & \textit{with links if available)} & \textit{given the item)} \\
+\hline
+\end{longtable}
+
+\section{Closure Statement}
+
+% Why is it acceptable to close this VA based on the test execution?
+%
+% Notes:
+%   * Closure approvals are captured outside of this memo in DNG attribute space.
+%   * When finished with the memo, link to the VA in DNG under ``Objective Evidence''.
+%   * For any questions/clarifications/concerns, contact Heather Bottom: heather.a.bottom@jpl.nasa.gov.
+
+
+% spherex.bib is distributed with spherex-tex and maintained at
+% https://github.com/SPHEREx/spherex-tex/blob/main/texmf/bibtex/bib/spherex.bib
+\bibliography{spherex}
+
+\end{document}
