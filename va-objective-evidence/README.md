@@ -60,7 +60,7 @@ git commit -m "Initialize repo"
 Now go to GitHub and create a new private repository in the https://github.com/IPAC-SW organization:
 
 - The repository name should be the lower-case version of the handle (the same as the name of the directory created by Cookiecutter in Step 1).
-- The repository description should be "SSDC" followed by the document title.
+- The repository description should be "SSDC Objective Evidence Report - " followed by the VA title, followed by "(VA dddddd)" where "dddddd" is the DOORS-NG ID for the VA.
 - **Do not** add a README, .gitignore, or LICENSE.  The appropriate boilerplate content is all in the template.
 - Please remember to make it private.
 
