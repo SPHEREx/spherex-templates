@@ -1,0 +1,117 @@
+\documentclass[TR]{spherex}
+% spherex class documentation: https://github.com/SPHEREx/spherex-tex/blob/main/README.md
+
+\input{meta}
+
+\spherexHandle{ {{- cookiecutter.handle -}} }
+\title{ {{- cookiecutter.req_name }} (Req {{ cookiecutter.req_doors_id -}} ): Requirement Closure Memo}
+\shortTitle{ {{- cookiecutter.req_name -}} : RCM}
+
+\version{0.1}
+% \docDate{YYYY-MM-DD} % uncomment to override the vcs date (see meta.tex)
+% \approved{YYYY-MM-DD}{Approver Name} % uncomment to set approval metadata
+
+\ipaclead[email= {{- cookiecutter.ipac_lead_email -}} ]{ {{- cookiecutter.ipac_lead_name -}} }
+
+% Additional authors, if any, separated by "\\":
+%% \author{
+%%  \person[email=galileo@example.com]{Galileo~Galilei} \\
+%%  \person{Isaac~Newton}
+%%}
+
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%% MAYBE THIS TEMPLATE SHOULD NOT USE \maketitle SO IT CAN STAY ON ONE PAGE
+
+\begin{dochistory}
+% Add later versions at the bottom.
+\addtohist{0.1}{2024-01-01}{Initial draft.}{ {{- cookiecutter.ipac_lead_name -}} }
+\end{dochistory}
+
+
+\section*{Requirement}
+
+\begin{longtable}{|l|p{0.5\textwidth}|}
+\hline
+\textbf{DNG ID} & \textbf{Requirement} \\
+\endhead
+\hline
+{{ cookiecutter.req_doors_id }} & REQ: L4\_SOS\_SSDC --- {{ cookiecutter.req_name }} (IPAC JIRA: {{ cookiecutter.req_jira_id -}}) \\
+ & (text of the requirement) \\
+\hline
+\end{longtable}
+
+
+\section*{V\&V Closure Summary}
+
+Verification of this requirement is based on the following VA(s):
+
+\begin{longtable}{|l|l|l|l|}
+\hline
+\textbf{DNG ID} & \textbf{VA Name} & \textbf{Date Completed} & \textbf{Test Report ID} \\
+\endhead
+\hline
+% Add more rows as necessary
+000000 & (title of the VA) & 2020-01-01 & SSDC-TR-0xx \\
+\hline
+\end{longtable}
+
+% [From the Alfresco Word template, copied January 2024]
+% Why is it ok to close this/these requirement(s)?
+% Describe which verification activities V&V’d this/these reqt(s) and how each activity contributed
+% to the piecewise reqt closure. Discuss any deviations from original verification approach
+% (including hardware config deviations, venue changes, etc.) and why those are ok.
+% If relevant, discuss process details and who was involved in the process and closure approval.
+% See examples in Alfresco folder.
+
+(narrative description)
+
+\section*{Objective Evidence of all Closure Materials}
+
+% Delete inapplicable elements as appropriate
+
+\begin{description}
+  \item[Memo Location:] This document can be found at the following locations:
+    \begin{description}
+      \item[IPAC Document Archive] \url{https://spherex-docs.ipac.caltech.edu/ {{- cookiecutter.handle|lower -}} }
+      \item[SPHEREx Alfresco] \url{https://alfresco.jpl.nasa.gov/share/page/site/spherex/...}
+    \end{description}
+  \item[Data Review Locations:] Objective Evidence Report(s) are available as follows:
+    \begin{description}
+      % Repeat the following as needed for each VA:
+      \item[VA 000000:] (VA name here)
+        \begin{description}
+          \item[IPAC Document Archive] \url{https://spherex-docs.ipac.caltech.edu/ssdc-tr-xxx}
+          \item[SPHEREx Alfresco] \url{https://alfresco.jpl.nasa.gov/share/page/site/spherex/...}
+        \end{description}
+    \end{description}
+\end{description}
+
+
+% This entire section may be deleted if there are no significant items
+\section*{Relevant Waivers, Issues, and Open Items}
+
+\begin{longtable}{|l|p{0.4\textwidth}|p{0.4\textwidth}|}
+\hline
+\textbf{Category} & \textbf{Item ID and/or title} & \textbf{Rationale for closure} \\
+ & & \textbf{notwithstanding the item} \\ \hline\hline
+\endhead
+% Delete categories that do not apply
+\textbf{Waivers} & \textit{Link(s) to any waivers that are needed for req closure (N/A if no waivers exist)} & \textit{Summary of waiver(s)} \\
+\hline
+\textbf{JIRA items} & \textit{(list ID (as href), title} & \textit{Rationale for reqt closure given the issue} \\
+% \href{https://jira.ipac.caltech.edu/browse/SP-xxx}{SP-xxx}:
+\hline
+\textbf{Open Items} & \textit{(list other open items,} & \textit{(Rationale for reqt closure} \\
+ & \textit{with links if available)} & \textit{given the open item)} \\
+\hline
+\end{longtable}
+
+
+% spherex.bib is distributed with spherex-tex and maintained at
+% https://github.com/SPHEREx/spherex-tex/blob/main/texmf/bibtex/bib/spherex.bib
+% \bibliography{spherex}
+
+\end{document}
