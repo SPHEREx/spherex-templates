@@ -1,0 +1,14 @@
+name: CI
+
+'on':
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-tex:
+    uses: SPHEREx/spherex-doc-workflows/.github/workflows/build-tex.yaml@v1
+    with:
+      doc: {{ cookiecutter.handle }}
+    secrets:
+      docs_api_password: {{ "${{ secrets.SPHEREX_DOCS_API_PASSWORD }}" }}

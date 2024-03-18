@@ -1,6 +1,6 @@
-# Verification Activity "Objective Evidence" document template
+# "Requirement Closure Memo" document template
 
-This is the template for SPHEREx Verification Activity "Objective Evidence" 
+This is the template for SPHEREx "Requirement Closure Memo"
 document repositories (`TR` document category).
 These documents are written in LaTeX and are built around
 [`spherex-tex` and the `spherex` document class](https://github.com/SPHEREx/spherex-tex).
@@ -22,7 +22,7 @@ You also need a recent version of Git.
 From the directory where you want to create the new document repository, run Cookiecutter:
 
 ```shell
-cookiecutter gh:SPHEREx/spherex-templates --directory va-objective-evidence
+cookiecutter gh:SPHEREx/spherex-templates --directory requirement-closure
 ```
 
 On the command line, answer each prompt to configure the document.
@@ -60,7 +60,7 @@ git commit -m "Initialize repo"
 Now go to GitHub and create a new private repository in the https://github.com/IPAC-SW organization:
 
 - The repository name should be the lower-case version of the handle (the same as the name of the directory created by Cookiecutter in Step 1).
-- The repository description should be "SSDC Objective Evidence Report - " followed by the VA title, followed by "(VA dddddd)" where "dddddd" is the DOORS-NG ID for the VA.
+- The repository description should be "SSDC Requirement Closure Memo - " followed by the requirement name, followed by "(Req dddddd)", where "dddddd" is the DOORS-NG ID of the requirement.
 - **Do not** add a README, .gitignore, or LICENSE.  The appropriate boilerplate content is all in the template.
 - Please remember to make it private.
 
@@ -108,23 +108,29 @@ a. Start by creating a branch for this work, e.g. (based on a work ticket),
 git checkout -b SP-nnn
 ```
 
-b. If you're starting with an existing draft, e.g., from Overleaf, copy over the content from the original document.
+b. **Replace occurrences of "https://example.org" in the document with the root URL for the JPL CAE server for the
+HTML renderings of the requirements and VAs from DOORS-NG.**
+You can find the URL in existing requirements-closure memos.
+This is important because it allows the references to requirements and VAs to be useful hyperlinks for those with
+access to the JPL VPN.
+
+c. If you're starting with an existing draft, e.g., from Overleaf, copy over the content from the original document.
 Replace any content **between** `\maketitle` and `\bibliography` with the original document's content.
 **Do not change the document class and do not remove/replace any of the header material from the template.
 Leave the \bibliography{spherex} from the template rather than using the one from the original document.**
 
 [Learn more about the spherex document class and spherex bibliography file.](https://github.com/SPHEREx/spherex-tex)
 
-c. Set the correct current document version number in the `\version{}` macro.
+d. Set the correct current document version number in the `\version{}` macro.
 For an existing document, for the initial load into GitHub, *keep the version number as it last appeared on Overleaf
 (or elsewhere).*
 
-d. Copy any images from the original document on Overleaf into the new repo.
+e. Copy any images from the original document on Overleaf into the new repo.
 
-e. If you'd like, you can compile the document locally.
+f. If you'd like, you can compile the document locally.
 See the [spherex-tex](https://github.com/SPHEREx/spherex-tex) repository's [README](https://github.com/SPHEREx/spherex-tex/blob/main/README.md) for instructions.
 
-f. Once ready, push this content to GitHub:
+g. Once ready, push this content to GitHub:
 
 ```shell
 git add .
