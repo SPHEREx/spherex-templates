@@ -1,0 +1,12 @@
+{
+  "serial_number": "000",
+  "handle": "SSDC-TR-{{ cookiecutter.serial_number }}",
+  "req_name": "Requirement title",
+  "req_doors_id": "145876",
+  "req_jira_id": "SVV-999 (optional)",
+  "ipac_lead_name": "First Last",
+  "ipac_lead_email": "ipac.lead@ipac.caltech.edu",
+  "_copy_without_render": [
+    "*.bib"
+  ]
+}
