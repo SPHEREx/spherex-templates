@@ -173,9 +173,6 @@ TSWLatexianTemp*
 *.bak
 *.sav
 
-# Emacs/mg
-*~
-
 # Texpad
 .texpadtmp
 
@@ -184,3 +181,6 @@ TSWLatexianTemp*
 
 # KBibTeX
 *~[0-9]*
+
+# emacs/mg
+*~
