@@ -5,7 +5,9 @@
 
 \spherexHandle{ {{- cookiecutter.handle -}} }
 \title{ {{- cookiecutter.req_name }} (Req {{ cookiecutter.req_doors_id -}} ): Requirement Closure Memo}
-\shortTitle{ {{- cookiecutter.req_name -}} : RCM}
+\shortTitle{Requirement {{ cookiecutter.req_doors_id }} Closure Memo}
+% \ReqDoorsID[https://cae-tracetree-spherex.jpl.nasa.gov/vi{{- cookiecutter.req_doors_id -}}.html]{ {{- cookiecutter.req_doors_id -}} }
+% \IPACJiraID{ {{- cookiecutter.req_jira_id -}} }
 
 \version{0.1}
 % \docDate{YYYY-MM-DD} % uncomment to override the vcs date (see meta.tex)
@@ -21,19 +23,18 @@
 
 
 \begin{document}
-\maketitle
-
-%%%%%%%%%%% MAYBE THIS TEMPLATE SHOULD NOT USE \maketitle SO IT CAN STAY ON ONE PAGE
+\maketitlecompact
 
 \begin{dochistory}
 % Add later versions at the bottom.
-\addtohist{0.1}{2024-01-01}{Initial draft.}{ {{- cookiecutter.ipac_lead_name -}} }
+\addtohist{0.1}{2024-01-01}{Initial draft}{ {{- cookiecutter.ipac_lead_name -}} }
 \end{dochistory}
 
+\begin{small}
 
-\section*{Requirement}
+\subsection*{Requirement}
 
-\begin{longtable}{|l|p{0.5\textwidth}|}
+\begin{longtable}{|l|p{0.8\textwidth}|}
 \hline
 \textbf{DNG ID} & \textbf{Requirement} \\
 \endhead
@@ -44,7 +45,7 @@
 \end{longtable}
 
 
-\section*{V\&V Closure Summary}
+\subsection*{V\&V Closure Summary}
 
 Verification of this requirement is based on the following VA(s):
 
@@ -60,15 +61,23 @@ Verification of this requirement is based on the following VA(s):
 
 % [From the Alfresco Word template, copied January 2024]
 % Why is it ok to close this/these requirement(s)?
-% Describe which verification activities V&V’d this/these reqt(s) and how each activity contributed
+% Describe which verification activities V&V'd this/these reqt(s) and how each activity contributed
 % to the piecewise reqt closure. Discuss any deviations from original verification approach
 % (including hardware config deviations, venue changes, etc.) and why those are ok.
 % If relevant, discuss process details and who was involved in the process and closure approval.
 % See examples in Alfresco folder.
 
-(narrative description)
+% Multiple VAs may appear in the above table and then in the list of narrative descriptions
+% that follows.
 
-\section*{Objective Evidence of all Closure Materials}
+\begin{description}
+  \item[000000 - (title of the VA):] (narrative description)
+\end{description}
+
+\noindent VA 000000 was approved on 2024-01-01, hence this requirement can be closed.
+
+
+\subsection*{Objective Evidence of all Closure Materials}
 
 % Delete inapplicable elements as appropriate
 
@@ -91,7 +100,7 @@ Verification of this requirement is based on the following VA(s):
 
 
 % This entire section may be deleted if there are no significant items
-\section*{Relevant Waivers, Issues, and Open Items}
+\subsection*{Relevant Waivers, Issues, and Open Items}
 
 \begin{longtable}{|l|p{0.4\textwidth}|p{0.4\textwidth}|}
 \hline
@@ -113,5 +122,7 @@ Verification of this requirement is based on the following VA(s):
 % spherex.bib is distributed with spherex-tex and maintained at
 % https://github.com/SPHEREx/spherex-tex/blob/main/texmf/bibtex/bib/spherex.bib
 % \bibliography{spherex}
+
+\end{small}
 
 \end{document}
