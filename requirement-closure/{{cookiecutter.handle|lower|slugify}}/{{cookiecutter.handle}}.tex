@@ -6,8 +6,8 @@
 \spherexHandle{ {{- cookiecutter.handle -}} }
 \title{ {{- cookiecutter.req_name }} (Req {{ cookiecutter.req_doors_id -}} ): Requirement Closure Memo}
 \shortTitle{Requirement {{ cookiecutter.req_doors_id }} Closure Memo}
-% \ReqDoorsID[https://cae-tracetree-spherex.jpl.nasa.gov/vi{{- cookiecutter.req_doors_id -}}.html]{ {{- cookiecutter.req_doors_id -}} }
-% \IPACJiraID{ {{- cookiecutter.req_jira_id -}} }
+\ReqDoorsID[https://cae-tracetree-spherex.jpl.nasa.gov/vi{{- cookiecutter.req_doors_id -}}.html]{ {{- cookiecutter.req_doors_id -}} }
+\IPACJiraID{ {{- cookiecutter.req_jira_id -}} }
 
 \version{0.1}
 % \docDate{YYYY-MM-DD} % uncomment to override the vcs date (see meta.tex)
@@ -21,14 +21,23 @@
 %%  \person{Isaac~Newton}
 %%}
 
+{% raw %}
+\providecommand{\DOORSReqLink}[1]{\href{https://cae-tracetree-spherex.jpl.nasa.gov/vi#1.html}{#1}}
+\providecommand{\IPACJiraLink}[1]{\href{https://jira.ipac.caltech.edu/browse/#1}{#1}}
+\providecommand{\SSDCDocsLink}[1]{\href{https://spherex-docs.ipac.caltech.edu/#1}{#1}}
+{% endraw %}
+
 
 \begin{document}
 \maketitlecompact
 
-\begin{dochistory}
-% Add later versions at the bottom.
-\addtohist{0.1}{2024-01-01}{Initial draft}{ {{- cookiecutter.ipac_lead_name -}} }
-\end{dochistory}
+% The document history cannot be rendered while keeping the document to a single page.
+% Please maintain it, though commented out, so that some record of intent remains in
+% the source code at least.
+% \begin{dochistory}
+% % Add later versions at the bottom.
+% \addtohist{0.1}{2024-01-01}{Initial draft}{ {{- cookiecutter.ipac_lead_name -}} }
+% \end{dochistory}
 
 \begin{small}
 
@@ -39,7 +48,7 @@
 \textbf{DNG ID} & \textbf{Requirement} \\
 \endhead
 \hline
-{{ cookiecutter.req_doors_id }} & REQ: L4\_SOS\_SSDC --- {{ cookiecutter.req_name }} (IPAC JIRA: {{ cookiecutter.req_jira_id -}}) \\
+\DOORSReqLink{ {{- cookiecutter.req_doors_id -}} } & REQ: L4\_SOS\_SSDC --- {{ cookiecutter.req_name }} (IPAC JIRA: \IPACJiraLink{ {{- cookiecutter.req_jira_id -}} }) \\
  & (text of the requirement) \\
 \hline
 \end{longtable}
@@ -55,7 +64,7 @@ Verification of this requirement is based on the following VA(s):
 \endhead
 \hline
 % Add more rows as necessary
-000000 & (title of the VA) & 2020-01-01 & SSDC-TR-0xx \\
+000000 (\IPACJiraLink{SVV-n}) & (title of the VA) & 2020-01-01 & \SSDCDocsLink{SSDC-TR-0xx} \\
 \hline
 \end{longtable}
 
