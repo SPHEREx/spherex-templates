@@ -2,7 +2,7 @@
   "serial_number": "000",
   "handle": "SSDC-TR-{{ cookiecutter.serial_number }}",
   "va_name": "Verification Activity name",
-  "va_doors_id": "145876",
+  "va_doors_id": "000000",
   "va_jira_id": "SVV-999 (optional)",
   "va_venue": "N/A",
   "ipac_lead_name": "First Last",
