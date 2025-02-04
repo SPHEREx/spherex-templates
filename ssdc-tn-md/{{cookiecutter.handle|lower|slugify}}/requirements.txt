@@ -1,0 +1,1 @@
+spherex-sphinx[technote] @ git+https://github.com/SPHEREx/spherex-sphinx@main
