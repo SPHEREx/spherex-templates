@@ -1,0 +1,11 @@
+[technote]
+id = "{{ cookiecutter.handle }}"
+series_id = "SSDC-{{ cookiecutter.category }}"
+canonical_url = "https://spherex-docs.ipac.caltech.edu/{{ cookiecutter.handle|lower|slugify }}/"
+github_url = "https://github.com/SPHEREx/{{ cookiecutter.handle|lower|slugify }}"
+date_created = "{% now 'utc', '%Y-%m-%d' %}"
+
+[[technote.authors]]
+name.given = "{{ cookiecutter.ipac_lead_given_name }}"
+name.family = "{{ cookiecutter.ipac_lead_family_name }}"
+email = "{{ cookiecutter.ipac_lead_email }}"

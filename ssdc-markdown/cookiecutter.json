@@ -1,0 +1,11 @@
+{
+  "category": ["TN", "OP"],
+  "serial_number": "000",
+  "handle": "SSDC-{{ cookiecutter.category }}-{{ cookiecutter.serial_number }}",
+  "title": "Document Title",
+  "ipac_lead_given_name": "First name",
+  "ipac_lead_family_name": "Last name",
+  "ipac_lead_email": "ipac.lead@ipac.caltech.edu",
+  "_copy_without_render": ["*.bib"],
+  "_extensions": ["jinja2_time.TimeExtension"]
+}

@@ -9,5 +9,6 @@
 - [ssdc-dp-latex](./ssdc-dp-latex/) — SSDC `DP` data product specification documents, LaTeX format
 - [ssdc-op-latex](./ssdc-op-latex/) — SSDC `OP` operational procedure documents, LaTeX format
 - [ssdc-tn-latex](./ssdc-tn-latex/) — SSDC `TN` technical note documents, LaTeX format
+- [ssdc-markdown](./ssdc-markdown/) — SSDC `TN` or `OP` documents, Markdown (Sphinx) format
 - [oia-latex](./oia-latex/) — SSDC `IF` Operational Interface Agreement documents, LaTeX format
 - [va-objective-evidence](./va-objective-evidence/) — SSDC `TR` Objective Evidence documents, LaTeX format
