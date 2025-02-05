@@ -1,6 +1,6 @@
-# Technical Note document template
+# Markdown-formatted document template
 
-This is the template for SSDC technical note document repositories (`TN` document category) written in **Markdown.**
+This is the template for Markdown formatted SSDC documents, available for `TN` and `OP` document categories.
 These documents are built around [`spherex-sphinx`](https://github.com/SPHEREx/spherex-sphinx) and the [Technote package](https://technote.lsst.io).
 
 ## How to create a new document
@@ -20,7 +20,7 @@ You also need a recent version of Git.
 From the directory where you want to create the new document repository, run Cookiecutter:
 
 ```shell
-cookiecutter gh:SPHEREx/spherex-templates --directory ssdc-tn-md
+cookiecutter gh:SPHEREx/spherex-templates --directory ssdc-markdown
 ```
 
 On the command line, answer each prompt to configure the document.
